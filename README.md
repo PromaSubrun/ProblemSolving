@@ -25,3 +25,27 @@
 
 11. 4sum
 
+
+MySQL
+
+1. Combine Two Tables
+
+2. Second Highest Salary
+
+3. Employees Earning More Than Their Managers
+
+4. Duplicate Emails
+
+5. Customers Who Never Order
+
+6. Big Countries
+
+7. Classes More Than 5 Students
+
+8. Not Boring Movies
+
+9. Swap Salary
+
+10. Delete Duplicate Emails
+
+
