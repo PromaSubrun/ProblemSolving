@@ -1,4 +1,4 @@
- ProblemSolving: [Leetcode](https://leetcode.com/subrun14/)
+ ProblemSolving: [Leetcode](https://leetcode.com/subrun14/) [HackerRank](https://www.hackerrank.com/psubrun14)
 
 
  JAVA
