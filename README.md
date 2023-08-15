@@ -1,7 +1,7 @@
  ProblemSolving: [Leetcode](https://leetcode.com/subrun14/) [HackerRank](https://www.hackerrank.com/psubrun14)
 
 
- JAVA
+ JAVA(Leetcode)
  
 1. Product of Array Except Self
 
@@ -26,7 +26,7 @@
 11. 4sum
 
 
-MySQL
+MySQL(Leetcode)
 
 1. Combine Two Tables
 
@@ -47,5 +47,22 @@ MySQL
 9. Swap Salary
 
 10. Delete Duplicate Emails
+
+
+
+
+ JAVA(HackerRank)
+
+1. Java Loops I
+
+2. Java Output Formatting
+
+3. Java Stdin and Stdout II
+
+4. Java If-Else
+
+5. Java Stdin and Stdout I
+
+6. Welcome to Java!
 
 
