@@ -1,57 +1,76 @@
-MySQL Leetcode problems
+MySQL Leetcode problems:
 
-1. Combine Two Tables
+1. Combine Two Tables:
+
 SELECT Person.FirstName, Person.LastName, Address.City, Address.State
 FROM Person
 LEFT JOIN Address ON Person.PersonId = Address.PersonId;
 
-2. Second Highest Salary
+
+2. Second Highest Salary:
+
 SELECT MAX(Salary) as 'SecondHighestSalary'
 FROM Employee
 WHERE Salary < (SELECT MAX(Salary) FROM Employee);
 
-3. Employees Earning More Than Their Managers
+
+3. Employees Earning More Than Their Managers:
+
 SELECT E1.Name as 'Employee'
 FROM Employee as E1, Employee as E2
 WHERE E1.ManagerId = E2.Id AND E1.Salary > E2.Salary;
 
-4. Duplicate Emails
+
+4. Duplicate Emails:
+
 SELECT Email
 FROM Person
 GROUP BY Email
 HAVING COUNT(*) > 1;
 
-5. Customers Who Never Order
+
+5. Customers Who Never Order:
+
 SELECT Customers.Name AS Customers
 FROM Customers
 LEFT JOIN Orders ON Customers.Id = Orders.CustomerId
 WHERE Orders.CustomerId IS NULL;
 
-6. Big Countries
+
+6. Big Countries:
+
 SELECT name, population, area
 FROM World
 WHERE area > 3000000 OR population > 25000000;
 
-7. Classes More Than 5 Students
+
+7. Classes More Than 5 Students:
+
 SELECT class
 FROM courses
 GROUP BY class
 HAVING COUNT(DISTINCT student) >= 5;
 
-8. Not Boring Movies
+
+8. Not Boring Movies:
+
 SELECT id, movie, description, rating
 FROM cinema
 WHERE (id LIKE '%1' OR id LIKE '%3' OR id LIKE '%5' OR id LIKE '%7' OR id LIKE '%9') AND description NOT IN ('boring')
 ORDER BY rating DESC;
 
-9. Swap Salary
+
+9. Swap Salary:
+
 UPDATE salary
 SET sex = (CASE WHEN sex = 'm' THEN 'f'
                 WHEN sex = 'f' THEN 'm' ELSE
                 'a'
            END);
 
-10. Delete Duplicate Emails
+
+10. Delete Duplicate Emails:
+
 DELETE a
 FROM Person a, Person b
 WHERE a.Email = b.Email AND
