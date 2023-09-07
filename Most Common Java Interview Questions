@@ -1,1 +1,818 @@
+Java Programming Interview Questions
+
+
+1. How do you reverse a string in Java?
+package interview;
+
+public class ReverseAString {
+	public static void main(String[] args) {
+		String Str = "ABCD";
+		String Reverse = "";
+		int len = Str.length();
+		for(int i=len-1; i>=0;i--) {
+			Reverse = Reverse + Str.charAt(i);
+		}
+		System.out.println("Reverse string is:"+Reverse);
+	}
+
+}
+
+2. How do you swap two numbers with using a third variable in Java?
+package interview;
+
+public class SwapNumberWithThirdValue {
+
+	public static void main(String[] args) {
+		int m = 10;
+		int n = 20;
+		System.out.println("Before swap m:"+m + "n:"+n);
+		int Temp = m;
+		m = n;
+		n = Temp;
+		System.out.println("After swap m:"+m + "n:"+n);
+	}
+
+}
+3. How do you swap two numbers without using a third variable in Java?
+package interview;
+
+public class SwapNumberWithoutThirdValue {
+
+
+			public static void main(String[] args) {
+				int a = 10;
+				int b = 20;
+
+			    System.out.println("a is " + a + " and b is " + b);
+
+				a = a + b;
+				b = a - b;
+				a = a - b;
+
+			    System.out.println("After swapping, a is " + a + " and b is " + b);
+
+	}
+
+}
+
+4. Write a Java program to check if a vowel is present in a string.
+package interview;
+
+public class CheckVowel {
+
+	public static void main(String[] args) {
+		System.out.println(stringContainsVowels("Hello")); // true
+		System.out.println(stringContainsVowels("TV")); // false
+	}
+
+	public static boolean stringContainsVowels(String input) {
+		return input.toLowerCase().matches(".*[aeiou].*");
+	}
+
+}
+5. Write a Java program to check if the given number is a prime number.
+package interview;
+
+public class CheckPrimeNumber {
+
+	public static void main(String[] args) {
+		System.out.println(isPrime(19)); // true
+		System.out.println(isPrime(49)); // false
+	}
+
+	public static boolean isPrime(int n) {
+		if (n == 0 || n == 1) {
+			return false;
+		}
+		if (n == 2) {
+			return true;
+		}  
+		for (int i = 2; i <= n / 2; i++) {
+			if (n % i == 0) {
+				return false;
+			}
+		}
+
+		return true;  
+
+	}
+
+}
+6. Write a Java program to print a Fibonacci sequence using recursion.
+public class PrintFibonacci {
+
+	public static void printFibonacciSequence(int count) {
+		int a = 0;
+		int b = 1;
+		int c = 1;
+
+		for (int i = 1; i <= count; i++) {
+			System.out.print(a + ", ");
+
+            a = b;
+			b = c;
+			c = a + b;
+		}
+	}
+
+	public static void main(String[] args) {
+    	printFibonacciSequence(10);
+	}
+
+}
+7. JavaProgramToAddTwoBinaryStrings.
+package interview;
+
+import java.util.Scanner;
+
+public class JavaProgramToAddTwoBinaryStrings {
+
+	public static void main(String[] args) {
+
+			Scanner obj = new Scanner(System.in);
+			System.out.println("First Number:");
+			String a = obj.nextLine();
+			System.out.println("First Number:");
+			String b = obj.nextLine();
+			
+			int N1 = Integer.parseInt(a,2);
+			int N2 = Integer.parseInt(b,2);
+			int N3 = N1 + N2;
+			System.out.println("Addition:"+Integer.toBinaryString(N3));
+
+	}
+
+}
+8. How do you check whether a string is a palindrome in Java?
+boolean checkPalindromeString(String input) {
+	boolean result = true;
+	int length = input.length();
+
+	for (int i = 0; i < length/2; i++) {
+		if (input.charAt(i) != input.charAt(length - i - 1)) {
+			result = false;
+			break;
+		}
+	}
+
+	return result;
+}
+
+9. How do you remove spaces from a string in Java?
+
+10. How do you remove leading and trailing spaces from a string in Java?
+
+11. How do you sort an array in Java?
+package interview;
+
+import java.util.Arrays;
+
+public class SortAnArray {
+
+	    public static void main(String[] args) {
+	        int[] numbers = {5, 2, 9, 1, 5, 6};
+
+	        // Sort the array in ascending order
+	        Arrays.sort(numbers);
+
+	        // Print the sorted array
+	        System.out.println("Sorted Array (Ascending): " + Arrays.toString(numbers));
+	    }
+}
+12. Swap Two Numbers.
+package interview;
+public class SwapToNumber {
+		public static void main(String[] args) {
+			int m = 10;
+			int n = 20;
+			System.out.println("Before swap m:"+m + "n:"+n);
+			int Temp = m;
+			m = n;
+			n = Temp;
+			System.out.println("After swap m:"+m + "n:"+n);
+		}		
+}
+13. How can you find the factorial of an integer in Java?
+package interview;
+
+public class FactorialOfAnInteger {
+	public static long factorial(long n) {
+		if (n == 1)
+			return 1;
+		else
+			return (n * factorial(n - 1));
+	}
+
+	public static void main(String[] args) {
+        int number = 5;
+        long factorial = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+}
+14. How do you reverse a linked list in Java?
+
+15. How do you implement a binary search in Java?
+public class BinarySearch {
+    public static int binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                return mid; // Element found, return its index
+            }
+
+            if (arr[mid] < target) {
+                left = mid + 1; // Search in the right half
+            } else {
+                right = mid - 1; // Search in the left half
+            }
+        }
+
+        return -1; // Element not found
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9, 11, 13};
+        int target = 7;
+        int result = binarySearch(arr, target);
+
+        if (result != -1) {
+            System.out.println("Element found at index " + result);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+    }
+}
+16. Write Java program that checks if two arrays contain the same elements.
+import java.util.Arrays;
+
+public class ArraysEquality {
+    public static boolean areArraysEqual(int[] arr1, int[] arr2) {
+        // Check if the arrays are of different lengths
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+
+        // Sort the arrays to ensure elements are in the same order
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        // Compare the sorted arrays element by element
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+
+        return true; // Arrays are equal
+    }
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {5, 4, 3, 2, 1};
+        int[] array3 = {1, 2, 3, 4, 6};
+
+        boolean equal1and2 = areArraysEqual(array1, array2);
+        boolean equal1and3 = areArraysEqual(array1, array3);
+
+        System.out.println("Arrays 1 and 2 are equal: " + equal1and2);
+        System.out.println("Arrays 1 and 3 are equal: " + equal1and3);
+    }
+}
+17. How do you get the sum of all elements in an integer array in Java?
+public class ArraySum {
+    public static int sumArrayElements(int[] arr) {
+        int sum = 0;
+
+        for (int num : arr) {
+            sum += num;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        int sum = sumArrayElements(numbers);
+
+        System.out.println("Sum of array elements: " + sum);
+    }
+}
+18. How do you find the second largest number in an array in Java?
+public class SecondLargest {
+    public static int findSecondLargest(int[] arr) {
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+
+        for (int num : arr) {
+            if (num > max) {
+                secondMax = max;
+                max = num;
+            } else if (num > secondMax && num != max) {
+                secondMax = num;
+            }
+        }
+
+        return secondMax;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {5, 7, 2, 8, 1, 9, 3};
+
+        int secondLargest = findSecondLargest(numbers);
+
+        System.out.println("Second largest number in the array: " + secondLargest);
+    }
+}
+19. How do you shuffle an array in Java?
+20. How can you find a string in a text file in Java?
+21. How do you print a date in specific format in Java?
+22. How do you merge two lists in Java?
+import java.util.ArrayList;
+import java.util.List;
+
+public class MergeLists {
+    public static void main(String[] args) {
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(3);
+        list2.add(4);
+
+        list1.addAll(list2); // Merge list2 into list1
+
+        System.out.println("Merged List: " + list1);
+    }
+}
+23. How do you remove all occurrences of a given character from an input string in Java?
+24. Can you write some code to showcase inheritance in Java?
+25. How do you create a record in Java?
+26. Show examples of overloading and overriding in Java.
+27. Java Program to Check if a Given Integer is Odd or Even.
+28. Java Program to Create a simple class and object.
+29. Java Program To Take an integer as input and print it.
+30. Java Program to Show Abstract in Class.
+31. Java Program to Show Polymorphism in Class.
+32. Java Program to Show Inheritance in Class.
+33. Java Program to Show Encapculation in Class.
+
+
+34. Java Program to Display Current Date and Time.
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class CurrentDateTime {
+    public static void main(String[] args) {
+        // Get the current date and time
+        Date currentDate = new Date();
+
+        // Create a SimpleDateFormat object to format the date and time
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+        // Format the current date and time as a string
+        String formattedDate = dateFormat.format(currentDate);
+
+        // Print the formatted date and time
+        System.out.println("Current Date and Time: " + formattedDate);
+    }
+}
+
+35. Java Program to Use Different Types of a Collection.
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
+import java.util.Map;
+
+
+public class DifferentTypesOfCollections {
+    public static void main(String[] args) {
+        // List: An ordered collection that allows duplicate elements
+        List<String> colorsList = new ArrayList<>();
+        colorsList.add("Red");
+        colorsList.add("Green");
+        colorsList.add("Blue");
+        colorsList.add("Red"); // Duplicate element is allowed
+
+
+        System.out.println("List of Colors: " + colorsList);
+
+
+        // Set: An unordered collection that does not allow duplicate elements
+        Set<Integer> numbersSet = new HashSet<>();
+        numbersSet.add(1);
+        numbersSet.add(2);
+        numbersSet.add(3);
+        numbersSet.add(2); // Duplicate element is not allowed
+
+
+        System.out.println("Set of Numbers: " + numbersSet);
+
+
+        // Map: A collection of key-value pairs
+        Map<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
+
+
+        System.out.println("Age of Bob: " + ageMap.get("Bob"));
+    }
+}
+36. Java Program to Print a Collection
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+
+public class PrintCollection {
+    public static void main(String[] args) {
+        // Create a List of strings
+        List<String> namesList = new ArrayList<>();
+        namesList.add("Alice");
+        namesList.add("Bob");
+        namesList.add("Charlie");
+        namesList.add("David");
+        namesList.add("Eve");
+
+
+        // Print the elements of the List using a loop
+        System.out.println("Elements of the List:");
+        for (String name : namesList) {
+            System.out.println(name);
+        }
+    }
+}
+37. Java Program to Compare Elements in a Collection.
+
+
+38. Java Program to Get the Size of the Collection.
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+
+public class CollectionSize {
+    public static void main(String[] args) {
+        // Create a List of integers
+        List<Integer> numbersList = new ArrayList<>();
+        numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(3);
+        numbersList.add(4);
+        numbersList.add(5);
+
+
+        // Get the size of the List using size() method
+        int size = numbersList.size();
+
+
+        // Print the size of the List
+        System.out.println("Size of the List: " + size);
+    }
+}
+39. Java Program to Compare Elements in a Collection.
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class CompareCollectionElements {
+    public static void main(String[] args) {
+        // Create two Lists of strings
+        List<String> list1 = new ArrayList<>();
+        list1.add("Apple");
+        list1.add("Banana");
+        list1.add("Cherry");
+
+
+        List<String> list2 = new ArrayList<>();
+        list2.add("Apple");
+        list2.add("Banana");
+        list2.add("Cherry");
+
+
+        // Compare the two Lists using equals() method
+        boolean areEqual = list1.equals(list2);
+
+
+        // Print the result
+        if (areEqual) {
+            System.out.println("The two Lists are equal.");
+        } else {
+            System.out.println("The two Lists are not equal.");
+        }
+    }
+}
+40. Java Program to Shuffle the Elements of a Collection.
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class ShuffleCollection {
+    public static void main(String[] args) {
+        // Create a List of integers
+        List<Integer> numbersList = new ArrayList<>();
+        numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(3);
+        numbersList.add(4);
+        numbersList.add(5);
+
+
+        // Shuffle the elements in the List
+        Collections.shuffle(numbersList);
+
+
+        // Print the shuffled List
+        System.out.println("Shuffled List: " + numbersList);
+    }
+}
+41. Java Program to Reverse a Collection.
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class ReverseCollection {
+    public static void main(String[] args) {
+        // Create a List of strings
+        List<String> namesList = new ArrayList<>();
+        namesList.add("Alice");
+        namesList.add("Bob");
+        namesList.add("Charlie");
+        namesList.add("David");
+        namesList.add("Eve");
+
+
+        // Reverse the order of elements in the List
+        Collections.reverse(namesList);
+
+
+        // Print the reversed List
+        System.out.println("Reversed List: " + namesList);
+    }
+}
+42. Java Program to Convert Collection into Array.
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class CollectionToArray {
+    public static void main(String[] args) {
+        // Create a List of integers
+        List<Integer> numbersList = new ArrayList<>();
+        numbersList.add(1);
+        numbersList.add(2);
+        numbersList.add(3);
+        numbersList.add(4);
+        numbersList.add(5);
+
+
+        // Convert the List to an array of integers
+        Integer[] numbersArray = numbersList.toArray(new Integer[0]);
+
+
+        // Print the array
+        System.out.println("Array from List: " + Arrays.toString(numbersArray));
+    }
+}
+43. Java Program to Convert Array into Collection.
+import java.util.Arrays;
+import java.util.List;
+
+
+public class ArrayToCollection {
+    public static void main(String[] args) {
+        // Create an array of integers
+        Integer[] numbersArray = {1, 2, 3, 4, 5};
+
+
+        // Convert the array to a List
+        List<Integer> numbersList = Arrays.asList(numbersArray);
+
+
+        // Print the List
+        System.out.println("List from Array: " + numbersList);
+    }
+}
+44. Java Program to Replace Elements in a List.
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class ReplaceListElements {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
+        fruits.add("Date");
+
+
+        // Replace the element at a specific index (e.g., index 1) with a new value
+        int indexToReplace = 1;
+        String newValue = "Grapes";
+        if (indexToReplace >= 0 && indexToReplace < fruits.size()) {
+            fruits.set(indexToReplace, newValue);
+        }
+
+
+        // Print the updated list
+        System.out.println("Updated List: " + fruits);
+    }
+}
+45. Java Program to Rotate Elements of a List
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class RotateListElements {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+
+        // Rotate the elements by a specified distance (e.g., 2 positions to the right)
+        int distance = 2;
+        Collections.rotate(numbers, distance);
+
+
+        System.out.println("Rotated List: " + numbers);
+    }
+}
+46. Find Maximum and Minimum Values in an Array.
+
+
+public class ArrayMinMax {
+    public static void findMinMax(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            System.out.println("Array is empty.");
+            return;
+        }
+
+
+        int min = arr[0];
+        int max = arr[0];
+
+
+        for (int num : arr) {
+            if (num < min) {
+                min = num;
+            }
+            if (num > max) {
+                max = num;
+            }
+        }
+
+
+        System.out.println("Minimum value: " + min);
+        System.out.println("Maximum value: " + max);
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = { 5, 2, 9, 1, 5, 6 };
+        findMinMax(arr);
+    }
+}
+
+
+47. Check if an Array is Sorted.
+
+
+public class ArraySortingCheck {
+    public static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr1 = { 1, 2, 3, 4, 5 };
+        int[] arr2 = { 5, 4, 3, 2, 1 };
+
+
+        System.out.println("Is arr1 sorted? " + isSorted(arr1));
+        System.out.println("Is arr2 sorted? " + isSorted(arr2));
+    }
+}
+
+
+48. Calculate the Sum of Digits in a Number.
+
+
+
+
+public class SumOfDigits {
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
+
+
+    public static void main(String[] args) {
+        int num = 12345;
+        int result = sumOfDigits(num);
+        System.out.println("Sum of digits in " + num + " is: " + result);
+    }
+}
+
+
+49. Find the Largest Palindrome in a List of Words.
+
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class LargestPalindromeInList {
+    public static String findLargestPalindrome(List<String> words) {
+        String largestPalindrome = "";
+        for (String word : words) {
+            if (isPalindrome(word) && word.length() > largestPalindrome.length()) {
+                largestPalindrome = word;
+            }
+        }
+        return largestPalindrome;
+    }
+
+
+    public static boolean isPalindrome(String str) {
+        str = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        List<String> words = new ArrayList<>();
+        words.add("racecar");
+        words.add("hello");
+        words.add("level");
+        words.add("world");
+        String largestPalindrome = findLargestPalindrome(words);
+        System.out.println("Largest palindrome in the list: " + largestPalindrome);
+    }
+}
+
+
+50. Check if a String is a Palindrome.
+
+
+
+
+public class StringPalindromeCheck {
+    public static boolean isPalindrome(String str) {
+        str = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        String str1 = "A man, a plan, a canal, Panama";
+        String str2 = "hello";
+        System.out.println("Is str1 a palindrome? " + isPalindrome(str1));
+        System.out.println("Is str2 a palindrome? " + isPalindrome(str2));
+    }
+}
 
