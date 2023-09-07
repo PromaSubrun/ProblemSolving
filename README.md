@@ -1,7 +1,9 @@
- ProblemSolving: [Leetcode](https://leetcode.com/subrun14/) [HackerRank](https://www.hackerrank.com/psubrun14)
+ ProblemSolving:
+ [Leetcode](https://leetcode.com/subrun14/) 
+ [HackerRank](https://www.hackerrank.com/psubrun14)
 
 
- JAVA(Leetcode)
+     JAVA(Leetcode)
  
 1. Product of Array Except Self
 
@@ -26,7 +28,7 @@
 11. 4sum
 
 
-MySQL(Leetcode)
+     MySQL(Leetcode)
 
 1. Combine Two Tables
 
@@ -51,7 +53,7 @@ MySQL(Leetcode)
 
 
 
- JAVA(HackerRank)
+     JAVA(HackerRank)
 
 1. Java Loops I
 
