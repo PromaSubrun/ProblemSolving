@@ -1,4 +1,5 @@
-1. Product of Array Except Self
+1. Product of Array Except Self:
+
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] result = new int[nums.length];
@@ -29,7 +30,8 @@ class Solution {
 }
 
 
-2. Contains Duplicate
+2. Contains Duplicate:
+
 class Solution {
     public boolean containsDuplicate(int[] nums) {
        if(nums==null || nums.length==0)
@@ -47,7 +49,8 @@ class Solution {
 }
 
 
-3. Climbing Stairs
+3. Climbing Stairs:
+
 lass Solution {
     public int climbStairs(int n) {
          if (n == 0) return 0;
@@ -65,7 +68,8 @@ lass Solution {
 }
 
 
-4. Minimum Path Sum
+4. Minimum Path Sum:
+
 class Solution {
     public int minPathSum(int[][] grid) {
         final int m = grid.length;
@@ -85,7 +89,8 @@ class Solution {
 }
 
 
-5. Maximum Subarray
+5. Maximum Subarray:
+
 class Solution {
     public int maxSubArray(int[] nums) {
        int result = nums[0];
@@ -102,7 +107,8 @@ class Solution {
 }
 
 
-6. 3Sum
+6. 3Sum:
+
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
        List<List<Integer>> result = new ArrayList<>();
@@ -126,7 +132,8 @@ class Solution {
 }
 
 
-7. Search Insert Position
+7. Search Insert Position:
+
 class Solution {
     public int searchInsert(int[] nums, int target) {
     int start=0;
@@ -152,7 +159,8 @@ class Solution {
 }
 
 
-8. Remove Element
+8. Remove Element:
+
 class Solution {
     public int removeElement(int[] nums, int val) {
         int count = 0;
@@ -167,7 +175,8 @@ class Solution {
 }
 
 
-9. Remove Duplicates from Sorted Array
+9. Remove Duplicates from Sorted Array:
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         int j = 0;
@@ -181,7 +190,8 @@ class Solution {
 }
 
 
-10. Two Sum
+10. Two Sum:
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         for(int i = 0 ; i < nums.length ; i++){
@@ -195,7 +205,11 @@ class Solution {
         return null;
     }
 }
-11. 4sum
+
+
+
+11. 4sum:
+
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
