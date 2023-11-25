@@ -1,9 +1,11 @@
- ProblemSolving:
+# ProblemSolving:
  [Leetcode](https://leetcode.com/subrun14/) 
  [HackerRank](https://www.hackerrank.com/psubrun14)
 
 
-     JAVA(Leetcode)
+
+
+     # JAVA(leetcode)
  
 * Product of Array Except Self
 * Contains Duplicate
@@ -18,7 +20,7 @@
 * 4sum
 
 
-     MySQL(Leetcode)
+    # MySQL(leetcode)
 
 * Combine Two Tables
 * Second Highest Salary
@@ -34,7 +36,7 @@
 
 
 
-     JAVA(HackerRank)
+    # JAVA(HackerRank)
 
 * Java Loops I
 * Java Output Formatting
@@ -44,7 +46,7 @@
 * Welcome to Java!
 
 
-    SQL(HackerRank)
+   # SQL(HackerRank)
 * Weather Observation Station 12
 * Weather Observation Station 11
 * Weather Observation Station 10
