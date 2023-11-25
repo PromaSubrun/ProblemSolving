@@ -68,3 +68,23 @@
 6. Welcome to Java!
 
 
+    SQL(HackerRank)
+* Weather Observation Station 12
+* Weather Observation Station 11
+* Weather Observation Station 10
+* Weather Observation Station 9
+* Weather Observation Station 8
+* Weather Observation Station 7
+* Weather Observation Station 5
+* Weather Observation Station 6
+* Weather Observation Station 4
+* Weather Observation Station 3
+* Weather Observation Station 1
+* Japanese Cities' Names
+* Japanese Cities' Attributes
+* Select By ID
+* Select All
+* Revising the Select Query II
+* Revising the Select Query I
+
+
