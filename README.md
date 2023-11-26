@@ -48,16 +48,7 @@
 
    # SQL(HackerRank)
   
-* Population Density Difference
-* Japan Population
-* Average Population
-* Revising Aggregations
-* Revising Aggregations
-* Revising Aggregations
-* Type of Triangle
-* Employee Salaries
-* Employee Names
-* Higher Than 75 Marks
+
 * Weather Observation Station 12
 * Weather Observation Station 11
 * Weather Observation Station 10
