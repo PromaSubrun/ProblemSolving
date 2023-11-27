@@ -48,8 +48,7 @@
 
    # SQL(HackerRank)
 
-* African Cities
-* Population Census
+
 * Weather Observation Station 17
 * Weather Observation Station 16
 * Weather Observation Station 15
