@@ -48,6 +48,14 @@
 
    # SQL(HackerRank)
 
+* New Companies
+* Binary Tree Nodes
+* Weather Observation Station 19
+* Weather Observation Station 18
+* The PADS-14 hours ago
+* Draw The Triangle 2
+* Draw The Triangle 1
+* Average Population of Each Continent
 * African Cities
 * Population Census
 * Weather Observation Station 17
