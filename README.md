@@ -38,6 +38,10 @@
 
     # JAVA(HackerRank)
 
+* Java Static Initializer Block
+* Java End-of-file
+* Java Loops II
+* java-datatypes
 * Java Loops I
 * Java Output Formatting
 * Java Stdin and Stdout II
