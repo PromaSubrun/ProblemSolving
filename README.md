@@ -23,6 +23,7 @@
 
     # MySQL(leetcode)
 
+* Recyclable and Low Fat Products
 * Combine Two Tables
 * Second Highest Salary
 * Employees Earning More Than Their Managers
