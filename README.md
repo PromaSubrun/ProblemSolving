@@ -23,6 +23,8 @@
 
     # MySQL(leetcode)
 
+* Find Customer Referee
+* Big Countries
 * Recyclable and Low Fat Products
 * Combine Two Tables
 * Second Highest Salary
