@@ -21,6 +21,7 @@
 
     # MySQL(leetcode)
 
+* Article Views I
 * Find Customer Referee
 * Big Countries
 * Recyclable and Low Fat Products
