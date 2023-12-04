@@ -7,7 +7,22 @@
 
 
    # JAVA(leetcode)
- 
+
+* Java Subarray
+* Java 2D Array
+* Java 1D Array
+* Java BigInteger
+* Java Primality Test
+* Pattern Syntax Checker
+* Java String Tokens
+* Java Anagrams
+* Java String Reverse
+* Java Substring Comparisons
+* Java Substring
+* Java Strings Introduction
+* Java Currency Formatter
+* Java Date and Time
+* Java Int to String
 * Product of Array Except Self
 * Contains Duplicate
 * Climbing Stairs
